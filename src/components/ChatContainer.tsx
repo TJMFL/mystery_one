@@ -20,7 +20,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
       id: '1',
       guestId: '123',
       role: 'assistant',
-      content: `Hey there, ${guestName}! 👋 I'm your Chicago Concierge AI. How can I help you enjoy your stay at ${propertyName}?`,
+      content: `Welcome to Chicago ${guestName}! I'm your virtual concierge and local guide for your stay at ${propertyName}. I can help you discover the best of Chicago, from iconic attractions to hidden gems. I can also help you find current events, and activities happening during your stay. Ask me about restaurants, museums, events, transportation, or anything else you'd like to know about the Windy City!`,
       timestamp: new Date(),
     },
   ]);
@@ -35,7 +35,6 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
   }, [messages]);
 
   const handleSendMessage = async (content: string) => {
-    // Add user message
     const userMessage: Message = {
       id: Date.now().toString(),
       guestId: '123',
@@ -43,13 +42,13 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
       content,
       timestamp: new Date(),
     };
-    
+
     setMessages((prev) => [...prev, userMessage]);
     setIsLoading(true);
-    
+
     try {
       const aiResponse = await getChatResponse(content);
-      
+
       const assistantMessage: Message = {
         id: Date.now().toString(),
         guestId: '123',
@@ -57,11 +56,11 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
         content: aiResponse,
         timestamp: new Date(),
       };
-      
+
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error getting AI response:', error);
-      
+
       const errorMessage: Message = {
         id: Date.now().toString(),
         guestId: '123',
@@ -69,7 +68,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
         content: "I apologize, but I'm having trouble connecting right now. Please try again in a moment.",
         timestamp: new Date(),
       };
-      
+
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
@@ -91,9 +90,10 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
           </div>
         </div>
       </div>
-      
-      <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
-        <div className="space-y-4">
+
+      {/* Chat message area with background image */}
+      <div className="flex-1 overflow-y-auto p-4 relative before:content-[''] before:absolute before:inset-0 before:bg-[url('/chi-back-2.jpeg')] before:bg-cover before:bg-center before:opacity-20 before:z-0">
+        <div className="relative z-10 space-y-4">
           {messages.map((message, index) => (
             <ChatMessage
               key={message.id}
@@ -111,7 +111,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
           <div ref={messagesEndRef} />
         </div>
       </div>
-      
+
       <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
     </div>
   );

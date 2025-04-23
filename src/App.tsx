@@ -34,7 +34,7 @@ function App() {
                 <Building className="h-6 w-6 text-blue-600 mr-2" />
                 Chicago Concierge
               </h1>
-              <p className="text-sm text-gray-500 mt-1">Your AI-powered local host</p>
+              <p className="text-sm text-gray-500 mt-1">Powered by ENSPYR AI</p>
             </div>
             
             <nav className="flex-1 p-4 space-y-1">
@@ -68,7 +68,7 @@ function App() {
             
             <div className="p-4 border-t border-gray-200">
               <div className="text-xs text-gray-500">
-                © 2025 Chicago Concierge AI
+                © 2025 ENSPYR AI
               </div>
             </div>
           </div>
