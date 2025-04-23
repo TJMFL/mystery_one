@@ -69,14 +69,14 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading = false 
           />
           <button
             onClick={handleSend}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-blue-600 hover:text-blue-700 disabled:opacity-50"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-red-600 hover:text-red-700 disabled:opacity-50"
             disabled={!message.trim() || isLoading}
           >
             <Send className="h-5 w-5" />
           </button>
         </div>
         <button 
-          className="rounded-full bg-blue-100 p-3 text-blue-600 hover:bg-blue-200 transition-colors disabled:opacity-50"
+          className="rounded-full bg-red-100 p-3 text-red-600 hover:bg-green-200 transition-colors disabled:opacity-50"
           disabled={isLoading}
         >
           <Mic className="h-5 w-5" />

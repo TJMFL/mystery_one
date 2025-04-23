@@ -34,13 +34,15 @@ function App() {
                 <Building className="h-6 w-6 text-blue-600 mr-2" />
                 Chicago Concierge
               </h1>
-              <p className="text-sm text-gray-500 mt-1">Powered by ENSPYR AI</p>
+              <p className="text-sm text-gray-500 mt-1">
+              Powered by <span className="font-bold text-red-600">ENSPYR AI</span>
+              </p>
             </div>
             
             <nav className="flex-1 p-4 space-y-1">
               <Link
                 to="/"
-                className="flex items-center px-3 py-2 text-gray-700 rounded-md hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                className="flex items-center px-3 py-2 text-red-700 rounded-md hover:bg-gray-100 hover:text-blue-600 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 <MapPin className="h-5 w-5 mr-3" />
@@ -48,7 +50,7 @@ function App() {
               </Link>
               <Link
                 to="/guest/brock-lang"
-                className="flex items-center px-3 py-2 text-gray-700 rounded-md hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                className="flex items-center px-3 py-2 text-red-700 rounded-md hover:bg-gray-100 hover:text-blue-600 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 <Building className="h-5 w-5 mr-3" />

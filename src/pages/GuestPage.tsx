@@ -22,7 +22,7 @@ const GuestPage: React.FC<GuestPageProps> = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-xl mx-auto bg-white min-h-screen shadow-sm">
-        <div className="p-4 bg-blue-600 text-white">
+        <div className="p-4 bg-red-600 text-white">
           <h1 className="text-xl font-bold">Welcome to Chicago, {guestData.name}!</h1>
           <p className="text-blue-100">Your personal concierge for {guestData.property.name}</p>
         </div>
@@ -31,7 +31,7 @@ const GuestPage: React.FC<GuestPageProps> = () => {
           <Card className="mb-4">
             <CardContent className="p-4">
               <div className="flex items-start">
-                <DoorClosed className="h-5 w-5 text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                <DoorClosed className="h-5 w-5 text-red-500 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="font-medium text-gray-900">Check-in Information</h3>
                   <p className="text-sm text-gray-600 mt-1">
@@ -51,7 +51,7 @@ const GuestPage: React.FC<GuestPageProps> = () => {
           <Card className="mb-4">
             <CardContent className="p-4">
               <div className="flex items-start">
-                <MapPin className="h-5 w-5 text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-red-500 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="font-medium text-gray-900">Property Location</h3>
                   <p className="text-sm text-gray-600 mt-1">{guestData.property.address}</p>
@@ -66,7 +66,7 @@ const GuestPage: React.FC<GuestPageProps> = () => {
           <Card className="mb-4">
             <CardContent className="p-4">
               <div className="flex items-start">
-                <Info className="h-5 w-5 text-amber-500 mt-1 mr-3 flex-shrink-0" />
+                <Info className="h-5 w-5 text-red-500 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="font-medium text-gray-900">Chicago Insider Tip</h3>
                   <p className="text-sm text-gray-600 mt-1">
