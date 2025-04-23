@@ -47,7 +47,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
     setIsLoading(true);
 
     try {
-      const aiResponse = await getChatResponse(content);
+      const aiResponse = await getChatResponse(content, '123');
 
       const assistantMessage: Message = {
         id: Date.now().toString(),

@@ -47,7 +47,7 @@ function App() {
                 Chat
               </Link>
               <Link
-                to="/guest/alex-johnson"
+                to="/guest/brock-lang"
                 className="flex items-center px-3 py-2 text-gray-700 rounded-md hover:bg-gray-100 hover:text-blue-600 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >

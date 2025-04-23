@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ChatContainer from '../components/ChatContainer';
 import { Card, CardContent } from '../components/ui/Card';
 import { MapPin, Calendar, DoorClosed, Info } from 'lucide-react';
 
@@ -9,8 +8,6 @@ interface GuestPageProps {}
 const GuestPage: React.FC<GuestPageProps> = () => {
   const { guestSlug } = useParams<{ guestSlug: string }>();
   
-  // In a real app, you would fetch guest data based on the slug
-  // This is mocked data for demonstration
   const guestData = {
     name: "Brock Lang",
     property: {
@@ -79,13 +76,6 @@ const GuestPage: React.FC<GuestPageProps> = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-        
-        <div className="h-[600px] border-t border-gray-200">
-          <ChatContainer 
-            guestName={guestData.name}
-            propertyName={guestData.property.name}
-          />
         </div>
       </div>
     </div>
